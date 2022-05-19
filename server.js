@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const registerRoutes = require('./routes/register');
 const loginRoutes = require('./routes/login');
+const usersRoutes = require('./routes/users');
 
 const server = express();
 
@@ -13,5 +14,6 @@ server.use(urlencoded({ extended: true }));
 
 server.use('/register', registerRoutes);
 server.use('/login', loginRoutes);
+server.use('/users', usersRoutes);
 
 server.listen(8000, () => console.log('Server wystartował'));
